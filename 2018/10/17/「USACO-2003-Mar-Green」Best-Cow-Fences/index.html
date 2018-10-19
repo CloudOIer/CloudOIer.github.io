@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="解题报告,二分,二分答案,前缀和," />
+  <meta name="keywords" content="二分,二分答案,前缀和," />
 
 
 
@@ -106,14 +106,14 @@
 
 
 <meta name="description" content="题目描述给定一个长度为 $n$ 的非负整数序列 $A$ ，求一个平均数最大的，长度不小于 $L$ 的子段。">
-<meta name="keywords" content="解题报告,二分,二分答案,前缀和">
+<meta name="keywords" content="二分,二分答案,前缀和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「USACO 2003 Mar. Green」Best Cow Fences">
 <meta property="og:url" content="http://yoursite.com/2018/10/17/「USACO-2003-Mar-Green」Best-Cow-Fences/index.html">
 <meta property="og:site_name" content="Lux sit">
 <meta property="og:description" content="题目描述给定一个长度为 $n$ 的非负整数序列 $A$ ，求一个平均数最大的，长度不小于 $L$ 的子段。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-17T08:16:48.143Z">
+<meta property="og:updated_time" content="2018-10-19T09:43:31.403Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「USACO 2003 Mar. Green」Best Cow Fences">
 <meta name="twitter:description" content="题目描述给定一个长度为 $n$ 的非负整数序列 $A$ ，求一个平均数最大的，长度不小于 $L$ 的子段。">
@@ -397,8 +397,6 @@
 <h5 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h5><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">10 </span><span class="number">6</span></span><br><span class="line"><span class="symbol">6 </span><span class="number">4</span> <span class="number">2</span> <span class="number">10</span> <span class="number">3</span> <span class="number">8</span> <span class="number">5</span> <span class="number">9</span> <span class="number">4</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
 <h5 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h5><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6500</span></span><br></pre></td></tr></table></figure>
 <h5 id="数据范围与提示"><a href="#数据范围与提示" class="headerlink" title="数据范围与提示"></a>数据范围与提示</h5><p>$1≤n≤10^5, 0≤A_i≤2000$。</p>
-<h5 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h5><p>USACO 2003 Mar. Green</p>
-<p>POJ2018</p>
 <h5 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h5><p>读完题发现这道题让我们求出一个最大的平均数，而这个平均数<del>大概</del>在一个区间内，所以考虑<strong>二分答案</strong>，并判定”是否存在一个长度不小于L的子序列，平均数不小于二分的值“。</p>
 <p>那么如何判断平均数是否小于二分的值呢？如果一个序列的平均值是二分的值，那么这个序列的每个数减去平均值后再加在一起和一定等于0，如果一个序列的平均值小于二分的值，那么减完后的和一定大于0。所以我们只要判定“是否存在一个长度不小于L的子序列，子序列的和非负”</p>
 <p>现在我们只需要考虑如何求一个子序列，它的和最大，且长度不小于L。</p>
@@ -424,8 +422,6 @@ max_{i-j\geq L}\{A_{j+1}+A_{j+2}+\dots+A_{i}\}=max_{L\leq i\leq n}\{sum_{i}-min_
       
         <div class="post-tags">
           
-            <a href="/tags/解题报告/" rel="tag"># 解题报告</a>
-          
             <a href="/tags/二分/" rel="tag"># 二分</a>
           
             <a href="/tags/二分答案/" rel="tag"># 二分答案</a>
@@ -443,8 +439,8 @@ max_{i-j\geq L}\{A_{j+1}+A_{j+2}+\dots+A_{i}\}=max_{L\leq i\leq n}\{sum_{i}-min_
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/12/「洛谷P1268」树的重量/" rel="next" title="树的重量">
-                <i class="fa fa-chevron-left"></i> 树的重量
+              <a href="/2018/09/27/算法笔记-Dijkstra/" rel="next" title="算法笔记 - Dijkstra">
+                <i class="fa fa-chevron-left"></i> 算法笔记 - Dijkstra
               </a>
             
           </div>
@@ -452,6 +448,10 @@ max_{i-j\geq L}\{A_{j+1}+A_{j+2}+\dots+A_{i}\}=max_{L\leq i\leq n}\{sum_{i}-min_
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/19/「NOI2001」炮兵阵地/" rel="prev" title="「NOI2001」炮兵阵地">
+                「NOI2001」炮兵阵地 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -554,7 +554,7 @@ max_{i-j\geq L}\{A_{j+1}+A_{j+2}+\dots+A_{i}\}=max_{L\leq i\leq n}\{sum_{i}-min_
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -614,7 +614,7 @@ max_{i-j\geq L}\{A_{j+1}+A_{j+2}+\dots+A_{i}\}=max_{L\leq i\leq n}\{sum_{i}-min_
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数据范围与提示"><span class="nav-number">6.</span> <span class="nav-text">数据范围与提示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#来源"><span class="nav-number">7.</span> <span class="nav-text">来源</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解答"><span class="nav-number">8.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码"><span class="nav-number">9.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数据范围与提示"><span class="nav-number">6.</span> <span class="nav-text">数据范围与提示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解答"><span class="nav-number">7.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码"><span class="nav-number">8.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
