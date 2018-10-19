@@ -105,19 +105,19 @@
 
 
 
-<meta name="description" content="题目描述司令部的将军们打算在$NM$的网格地图上部署他们的炮兵部队。一个$NM$的地图由$N$行$M$列组成，地图的每一格可能是山地（用“H” 表示），也可能是平原（用“P”表示），如下图。在每一格平原地形上最多可以布置一支炮兵部队（山地上不能够部署炮兵部队）；一支炮兵部队在地图上的攻击范围如图中黑色区域所示： 输入格式第一行包含两个由空格分割开的正整数，分别表示N和M； 接下来的$N$行，每一行">
+<meta name="description" content="题目描述司令部的将军们打算在$NM$的网格地图上部署他们的炮兵部队。一个$NM$的地图由$N$行$M$列组成，地图的每一格可能是山地（用“H” 表示），也可能是平原（用“P”表示），如下图。在每一格平原地形上最多可以布置一支炮兵部队（山地上不能够部署炮兵部队）；一支炮兵部队在地图上的攻击范围如图中黑色区域所示：">
 <meta name="keywords" content="DP,状态压缩">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「NOI2001」炮兵阵地">
 <meta property="og:url" content="http://yoursite.com/2018/10/19/「NOI2001」炮兵阵地/index.html">
 <meta property="og:site_name" content="Lux sit">
-<meta property="og:description" content="题目描述司令部的将军们打算在$NM$的网格地图上部署他们的炮兵部队。一个$NM$的地图由$N$行$M$列组成，地图的每一格可能是山地（用“H” 表示），也可能是平原（用“P”表示），如下图。在每一格平原地形上最多可以布置一支炮兵部队（山地上不能够部署炮兵部队）；一支炮兵部队在地图上的攻击范围如图中黑色区域所示： 输入格式第一行包含两个由空格分割开的正整数，分别表示N和M； 接下来的$N$行，每一行">
+<meta property="og:description" content="题目描述司令部的将军们打算在$NM$的网格地图上部署他们的炮兵部队。一个$NM$的地图由$N$行$M$列组成，地图的每一格可能是山地（用“H” 表示），也可能是平原（用“P”表示），如下图。在每一格平原地形上最多可以布置一支炮兵部队（山地上不能够部署炮兵部队）；一支炮兵部队在地图上的攻击范围如图中黑色区域所示：">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/10/19/「NOI2001」炮兵阵地/Cannon.png">
-<meta property="og:updated_time" content="2018-10-19T11:15:04.503Z">
+<meta property="og:updated_time" content="2018-10-19T11:20:22.502Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「NOI2001」炮兵阵地">
-<meta name="twitter:description" content="题目描述司令部的将军们打算在$NM$的网格地图上部署他们的炮兵部队。一个$NM$的地图由$N$行$M$列组成，地图的每一格可能是山地（用“H” 表示），也可能是平原（用“P”表示），如下图。在每一格平原地形上最多可以布置一支炮兵部队（山地上不能够部署炮兵部队）；一支炮兵部队在地图上的攻击范围如图中黑色区域所示： 输入格式第一行包含两个由空格分割开的正整数，分别表示N和M； 接下来的$N$行，每一行">
+<meta name="twitter:description" content="题目描述司令部的将军们打算在$NM$的网格地图上部署他们的炮兵部队。一个$NM$的地图由$N$行$M$列组成，地图的每一格可能是山地（用“H” 表示），也可能是平原（用“P”表示），如下图。在每一格平原地形上最多可以布置一支炮兵部队（山地上不能够部署炮兵部队）；一支炮兵部队在地图上的攻击范围如图中黑色区域所示：">
 <meta name="twitter:image" content="http://yoursite.com/2018/10/19/「NOI2001」炮兵阵地/Cannon.png">
 
 
@@ -392,7 +392,8 @@
 
       
         <h5 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h5><p>司令部的将军们打算在$N<em>M$的网格地图上部署他们的炮兵部队。一个$N</em>M$的地图由$N$行$M$列组成，地图的每一格可能是山地（用“H” 表示），也可能是平原（用“P”表示），如下图。在每一格平原地形上最多可以布置一支炮兵部队（山地上不能够部署炮兵部队）；一支炮兵部队在地图上的攻击范围如图中黑色区域所示：<br><img src="/2018/10/19/「NOI2001」炮兵阵地/Cannon.png" alt="哎呀！图片走丢了！"></p>
-<h5 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h5><p>第一行包含两个由空格分割开的正整数，分别表示N和M；</p>
+<a id="more"></a>
+<h5 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h5><p>第一行包含两个由空格分割开的正整数，分别表示$N$和$M$；</p>
 <p>接下来的$N$行，每一行含有连续的$M$个字符（‘P’或者‘H’），中间没有空格。按顺序表示地图中每一行的数据。$N\leq100$；$M\leq10$。</p>
 <h5 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h5><p>仅一行，包含一个整数$K$，表示最多能摆放的炮兵部队的数量。</p>
 <h5 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h5><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span> <span class="number">4</span></span><br><span class="line">PHPP</span><br><span class="line">PPHH</span><br><span class="line">PPPP</span><br><span class="line">PHPP</span><br><span class="line">PHHP</span><br></pre></td></tr></table></figure>
