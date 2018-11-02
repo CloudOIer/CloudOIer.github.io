@@ -105,18 +105,17 @@
 
 
 
-<meta name="description" content="介绍在做题时，题目有时候会要求我们对一些特别大的数进行运算，这些数通常远超过$long\ long$的范围，这时就需要用到高精度算法。高精度算法的原理比较简单，请读者自行百度，这里主要介绍一下压位高精度算法。">
 <meta name="keywords" content="高精度,模板">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法笔记 - 压位高精">
 <meta property="og:url" content="http://yoursite.com/2018/10/25/算法笔记-压位高精/index.html">
 <meta property="og:site_name" content="Lux sit">
-<meta property="og:description" content="介绍在做题时，题目有时候会要求我们对一些特别大的数进行运算，这些数通常远超过$long\ long$的范围，这时就需要用到高精度算法。高精度算法的原理比较简单，请读者自行百度，这里主要介绍一下压位高精度算法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-30T10:09:40.521Z">
+<meta property="og:image" content="http://yoursite.com/2018/10/25/算法笔记-压位高精/bg.jpg">
+<meta property="og:updated_time" content="2018-11-02T02:22:53.087Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法笔记 - 压位高精">
-<meta name="twitter:description" content="介绍在做题时，题目有时候会要求我们对一些特别大的数进行运算，这些数通常远超过$long\ long$的范围，这时就需要用到高精度算法。高精度算法的原理比较简单，请读者自行百度，这里主要介绍一下压位高精度算法。">
+<meta name="twitter:image" content="http://yoursite.com/2018/10/25/算法笔记-压位高精/bg.jpg">
 
 
 
@@ -389,8 +388,9 @@
       
 
       
-        <h5 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h5><p>在做题时，题目有时候会要求我们对一些特别大的数进行运算，这些数通常远超过$long\ long$的范围，这时就需要用到高精度算法。高精度算法的原理比较简单，请读者自行百度，这里主要介绍一下压位高精度算法。</p>
+        <p><img src="/2018/10/25/算法笔记-压位高精/bg.jpg" alt="哎呀！图片走丢了！"></p>
 <a id="more"></a>
+<h5 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h5><p>在做题时，题目有时候会要求我们对一些特别大的数进行运算，这些数通常远超过$long\ long$的范围，这时就需要用到高精度算法。高精度算法的原理比较简单，请读者自行百度，这里主要介绍一下压位高精度算法。</p>
 <p>在一般的高精度算法中，我们用一个数组的各个元素表示一个大数的各位上的数，但是，一个$int$类的数组的每一个元素可以存储不大于$2147483647$的数，如果每个元素中只存一位数的话岂不是太浪费了，所以我们将多位数压在一起存。使得空间消耗减少，同时也能提高时间效率。</p>
 <p>举个栗子，如果我们要存$1234567890$，一般的存法是让$a[0]=0,a[1]=9…$，而用压位高精的话（以压四位为例），就变成$a[0]=7890,a[1]=3456…$，其它的操作不变，还是模拟竖式来做，只不过是一次操作四位罢了。</p>
 <p>需要注意的是，使用压位高精，在输出时，除了数组中的最后一个元素，其它的都需要补零输出。</p>
