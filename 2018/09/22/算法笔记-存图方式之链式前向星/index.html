@@ -107,15 +107,15 @@
 
 <meta name="keywords" content="图论">
 <meta property="og:type" content="article">
-<meta property="og:title" content="算法笔记 - 邻接链表存图">
-<meta property="og:url" content="http://yoursite.com/2018/09/22/算法笔记-邻接链表存图/index.html">
+<meta property="og:title" content="算法笔记 - 存图方式之链式前向星">
+<meta property="og:url" content="http://yoursite.com/2018/09/22/算法笔记-存图方式之链式前向星/index.html">
 <meta property="og:site_name" content="Lux sit">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/09/22/算法笔记-邻接链表存图/bg.jpg">
-<meta property="og:updated_time" content="2018-11-02T02:22:08.912Z">
+<meta property="og:image" content="http://yoursite.com/2018/09/22/算法笔记-存图方式之链式前向星/bg.jpg">
+<meta property="og:updated_time" content="2018-11-08T23:21:48.994Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="算法笔记 - 邻接链表存图">
-<meta name="twitter:image" content="http://yoursite.com/2018/09/22/算法笔记-邻接链表存图/bg.jpg">
+<meta name="twitter:title" content="算法笔记 - 存图方式之链式前向星">
+<meta name="twitter:image" content="http://yoursite.com/2018/09/22/算法笔记-存图方式之链式前向星/bg.jpg">
 
 
 
@@ -145,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/22/算法笔记-邻接链表存图/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/22/算法笔记-存图方式之链式前向星/"/>
 
 
 
 
 
-  <title>算法笔记 - 邻接链表存图 | Lux sit</title>
+  <title>算法笔记 - 存图方式之链式前向星 | Lux sit</title>
   
 
 
@@ -288,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/22/算法笔记-邻接链表存图/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/22/算法笔记-存图方式之链式前向星/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="枫华丶夜幻">
@@ -305,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">算法笔记 - 邻接链表存图</h1>
+          <h1 class="post-title" itemprop="name headline">算法笔记 - 存图方式之链式前向星</h1>
         
 
         <div class="post-meta">
@@ -388,10 +388,10 @@
       
 
       
-        <p><img src="/2018/09/22/算法笔记-邻接链表存图/bg.jpg" alt="哎呀！图片走丢了！"></p>
+        <p><img src="/2018/09/22/算法笔记-存图方式之链式前向星/bg.jpg" alt="哎呀！图片走丢了！"></p>
 <a id="more"></a>
-<p>刚学了邻接链表存图，来记录一下，以便以后<del>抄模板</del>复习用。</p>
-<p>邻接链表存图的核心思想是将读入的每一条边编号，记录下从每个点出发的第一条边的编号，并且记录下每条边的“下一条边”的编号。</p>
+<p>刚学了链式前向星存图，来记录一下，以便以后<del>抄模板</del>复习用。</p>
+<p>链式前向星存图的核心思想是将读入的每一条边编号，记录下从每个点出发的第一条边的编号，并且记录下每条边的“下一条边”的编号。</p>
 <p>这样一来，当我们需要遍历从一个点出发的所有边时，只需要从该点的第一条边开始，遍历完成后找到该边的“下一条边”继续遍历。</p>
 <p>具体实现时要用到两个数组，first数组和next数组。</p>
 <p>开始时我们将两个数组初始化为-1。</p>
