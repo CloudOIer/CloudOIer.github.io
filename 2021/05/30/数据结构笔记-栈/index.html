@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="二分,二分答案,前缀和," />
+  <meta name="keywords" content="栈,数据结构," />
 
 
 
@@ -105,17 +105,17 @@
 
 
 
-<meta name="keywords" content="二分,二分答案,前缀和">
+<meta name="keywords" content="栈,数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「USACO 2003 Mar. Green」Best Cow Fences">
-<meta property="og:url" content="http://yoursite.com/2018/10/17/「USACO-2003-Mar-Green」Best-Cow-Fences/index.html">
+<meta property="og:title" content="数据结构笔记-栈">
+<meta property="og:url" content="http://yoursite.com/2021/05/30/数据结构笔记-栈/index.html">
 <meta property="og:site_name" content="Lux sit">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/10/17/「USACO-2003-Mar-Green」Best-Cow-Fences/bg.jpg">
-<meta property="og:updated_time" content="2018-11-02T02:19:34.341Z">
+<meta property="og:image" content="http://yoursite.com/2021/05/30/数据结构笔记-栈/bg.jpg">
+<meta property="og:updated_time" content="2021-05-30T08:47:10.504Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="「USACO 2003 Mar. Green」Best Cow Fences">
-<meta name="twitter:image" content="http://yoursite.com/2018/10/17/「USACO-2003-Mar-Green」Best-Cow-Fences/bg.jpg">
+<meta name="twitter:title" content="数据结构笔记-栈">
+<meta name="twitter:image" content="http://yoursite.com/2021/05/30/数据结构笔记-栈/bg.jpg">
 
 
 
@@ -145,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/17/「USACO-2003-Mar-Green」Best-Cow-Fences/"/>
+  <link rel="canonical" href="http://yoursite.com/2021/05/30/数据结构笔记-栈/"/>
 
 
 
 
 
-  <title>「USACO 2003 Mar. Green」Best Cow Fences | Lux sit</title>
+  <title>数据结构笔记-栈 | Lux sit</title>
   
 
 
@@ -288,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/17/「USACO-2003-Mar-Green」Best-Cow-Fences/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/05/30/数据结构笔记-栈/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="枫华丶夜幻">
@@ -305,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">「USACO 2003 Mar. Green」Best Cow Fences</h1>
+          <h1 class="post-title" itemprop="name headline">数据结构笔记-栈</h1>
         
 
         <div class="post-meta">
@@ -317,8 +317,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-17T16:14:41+08:00">
-                2018-10-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-05-30T15:28:39+08:00">
+                2021-05-30
               </time>
             
 
@@ -351,8 +351,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
+                  <a href="/categories/OI/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -388,23 +388,13 @@
       
 
       
-        <p><img src="/2018/10/17/「USACO-2003-Mar-Green」Best-Cow-Fences/bg.jpg" alt="哎呀！图片走丢了！"></p>
+        <p><img src="/2021/05/30/数据结构笔记-栈/bg.jpg" alt="哎呀！图片走丢了！"></p>
 <a id="more"></a>
-<h5 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h5><p>给定一个长度为 $n$ 的非负整数序列 $A$ ，求一个平均数最大的，长度不小于 $L$ 的子段。</p>
-<h5 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h5><p>第一行用空格分隔的两个整数 $n$ 和 $L$；</p>
-<p>第二行为 $n$ 个用空格隔开的非负整数，表示 $A_i$。</p>
-<h5 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h5><p>输出一个整数，表示答案的 $1000$ 倍。不用四舍五入，直接输出。</p>
-<h5 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h5><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">10 </span><span class="number">6</span></span><br><span class="line"><span class="symbol">6 </span><span class="number">4</span> <span class="number">2</span> <span class="number">10</span> <span class="number">3</span> <span class="number">8</span> <span class="number">5</span> <span class="number">9</span> <span class="number">4</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h5 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h5><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6500</span></span><br></pre></td></tr></table></figure>
-<h5 id="数据范围与提示"><a href="#数据范围与提示" class="headerlink" title="数据范围与提示"></a>数据范围与提示</h5><p>$1≤n≤10^5, 0≤A_i≤2000$。</p>
-<h5 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h5><p>读完题发现这道题让我们求出一个最大的平均数，而这个平均数<del>大概</del>在一个区间内，所以考虑<strong>二分答案</strong>，并判定”是否存在一个长度不小于L的子序列，平均数不小于二分的值“。</p>
-<p>那么如何判断平均数是否小于二分的值呢？如果一个序列的平均值是二分的值，那么这个序列的每个数减去平均值后再加在一起和一定等于0，如果一个序列的平均值小于二分的值，那么减完后的和一定大于0。所以我们只要判定“是否存在一个长度不小于L的子序列，子序列的和非负”</p>
-<p>现在我们只需要考虑如何求一个子序列，它的和最大，且长度不小于L。</p>
-<p>我们知道子序列的和可以转化为前缀和相减的形式，所以我们设$sum_i$表示$A_1～A_i$的和，则有：</p>
-<script type="math/tex; mode=display">
-max_{i-j\geq L}\{A_{j+1}+A_{j+2}+\dots+A_{i}\}=max_{L\leq i\leq n}\{sum_{i}-min_{0\leq j\leq i-L}\{sum_{j}\}\}</script><p>观察式子可以发现，随着$i$的增加，$j$的取值范围每次只会增加$1$。也就是说，集合$min\{sum_j\}$中每次只会增加一个新的取值，所以我们不用每次$i$递增时都循环枚举$j$次，只需要记录当前最小值，每次与新的$sum_{i-L}$取$min$即可。</p>
-<p>解决了这个问题，我们只需要判断最大的子序列和是否非负，就可确定当前二分的值是否正确了。</p>
-<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100010</span>;</span><br><span class="line"><span class="keyword">double</span> a[maxn],b[maxn],add[maxn];</span><br><span class="line"><span class="keyword">int</span> n,len;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;len;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">	<span class="keyword">double</span> l=<span class="number">-1e6</span>,r=<span class="number">1e6</span>,eps=<span class="number">1e-5</span>;</span><br><span class="line">	<span class="keyword">while</span>(r-l&gt;eps)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">double</span> mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">			b[i]=a[i]-mid;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">			add[i]=add[i<span class="number">-1</span>]+b[i];</span><br><span class="line">		<span class="keyword">double</span> minn=<span class="number">1e10</span>,ans=<span class="number">-1e10</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=len;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			minn=min(minn,add[i-len]);</span><br><span class="line">			ans=max(ans,add[i]-minn);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(ans&gt;=<span class="number">0</span>)</span><br><span class="line">			l=mid;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			r=mid;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="keyword">int</span>(r*<span class="number">1000</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="什么是栈？"><a href="#什么是栈？" class="headerlink" title="什么是栈？"></a>什么是栈？</h4><p>栈本质上就是限定仅在一端进行插入或删除操作的线性表。因此栈又称为后进先出（last in first out）的线性表（简称LIFO结构）。进行操作的这一端称为栈顶，另一端称为栈底。</p>
+<h4 id="栈的实现"><a href="#栈的实现" class="headerlink" title="栈的实现"></a>栈的实现</h4><p>栈的实现方法有顺序实现和链式实现，链式实现与单链表的链式实现相似（毕竟栈只是特殊的单链表）。</p>
+<h5 id="栈的顺序实现"><a href="#栈的顺序实现" class="headerlink" title="栈的顺序实现"></a>栈的顺序实现</h5><p>这里采用结构体封装，下面直接给出代码。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STACK_INIT_SIZE 100 <span class="comment">//储存空间初始量</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STACKINCREMENT 10 <span class="comment">//储存空间增量</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    SelemType *base;</span><br><span class="line">    SelemType *top;</span><br><span class="line">    <span class="keyword">int</span> stacksize;</span><br><span class="line">&#125;<span class="built_in">stack</span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">InitStack</span><span class="params">(<span class="built_in">stack</span> &amp;S)</span> <span class="comment">//初始化空栈</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    S.base=(SelemType*)<span class="built_in">malloc</span>(STACK_INTI_SIZE*<span class="keyword">sizeof</span>(SelemType));</span><br><span class="line">    <span class="keyword">if</span>(!S.base) <span class="comment">//储存分配失败</span></span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">    S.top=S.base;</span><br><span class="line">    S.stacksize=STACK_INIT_SIZE;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">GetTop</span><span class="params">(<span class="built_in">stack</span> &amp;S,SelemType &amp;e)</span> <span class="comment">//若栈不空，则用e返回栈顶元素</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(S.top==S.base)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    e=*(S.top<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Push</span><span class="params">(<span class="built_in">stack</span> &amp;S,SelemType e)</span> <span class="comment">//插入元素e作为栈顶元素</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(S.top-S.base&gt;=S.stacksize) <span class="comment">//栈满，增加储存空间</span></span><br><span class="line">    &#123;</span><br><span class="line">        S.base=(SelemType*)<span class="built_in">realloc</span>(S.base,(S.stacksize+STACKINCREMENT)*<span class="keyword">sizeof</span>(SelemType));</span><br><span class="line">        <span class="keyword">if</span>(!S.base) <span class="comment">//储存分配失败</span></span><br><span class="line">            <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">        S.top=S.base+S.stacksize;</span><br><span class="line">        S.stacksize+=STACKINCREMENT;</span><br><span class="line">    &#125;</span><br><span class="line">    S.top++=e;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Pop</span><span class="params">(<span class="built_in">stack</span> &amp;S,SelemType &amp;e)</span> <span class="comment">//若栈不空，则弹出栈顶元素并用e返回其值</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(S.top==S.base)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    e=*--S.top;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="栈的链式实现"><a href="#栈的链式实现" class="headerlink" title="栈的链式实现"></a>栈的链式实现</h5><p>栈的链式实现即为只在表头插入和删除的单链表，这里不再赘述，详情见<a href="https://cloudoier.github.io/2021/04/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0-%E5%8D%95%E9%93%BE%E8%A1%A8/" target="_blank" rel="noopener">单链表篇</a></p>
 
       
     </div>
@@ -422,11 +412,9 @@ max_{i-j\geq L}\{A_{j+1}+A_{j+2}+\dots+A_{i}\}=max_{L\leq i\leq n}\{sum_{i}-min_
       
         <div class="post-tags">
           
-            <a href="/tags/二分/" rel="tag"># 二分</a>
+            <a href="/tags/栈/" rel="tag"># 栈</a>
           
-            <a href="/tags/二分答案/" rel="tag"># 二分答案</a>
-          
-            <a href="/tags/前缀和/" rel="tag"># 前缀和</a>
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
           
         </div>
       
@@ -439,8 +427,8 @@ max_{i-j\geq L}\{A_{j+1}+A_{j+2}+\dots+A_{i}\}=max_{L\leq i\leq n}\{sum_{i}-min_
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/27/算法笔记-Dijkstra/" rel="next" title="算法笔记 - Dijkstra">
-                <i class="fa fa-chevron-left"></i> 算法笔记 - Dijkstra
+              <a href="/2021/04/19/数据结构笔记-单链表/" rel="next" title="数据结构笔记-单链表">
+                <i class="fa fa-chevron-left"></i> 数据结构笔记-单链表
               </a>
             
           </div>
@@ -448,10 +436,6 @@ max_{i-j\geq L}\{A_{j+1}+A_{j+2}+\dots+A_{i}\}=max_{L\leq i\leq n}\{sum_{i}-min_
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/19/「NOI2001」炮兵阵地/" rel="prev" title="「NOI2001」炮兵阵地">
-                「NOI2001」炮兵阵地 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -626,7 +610,7 @@ max_{i-j\geq L}\{A_{j+1}+A_{j+2}+\dots+A_{i}\}=max_{L\leq i\leq n}\{sum_{i}-min_
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数据范围与提示"><span class="nav-number">6.</span> <span class="nav-text">数据范围与提示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解答"><span class="nav-number">7.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码"><span class="nav-number">8.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是栈？"><span class="nav-number">1.</span> <span class="nav-text">什么是栈？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栈的实现"><span class="nav-number">2.</span> <span class="nav-text">栈的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#栈的顺序实现"><span class="nav-number">2.1.</span> <span class="nav-text">栈的顺序实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#栈的链式实现"><span class="nav-number">2.2.</span> <span class="nav-text">栈的链式实现</span></a></li></ol></li></ol></div>
             
 
           </div>

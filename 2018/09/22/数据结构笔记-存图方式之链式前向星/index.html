@@ -112,7 +112,7 @@
 <meta property="og:site_name" content="Lux sit">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/09/22/数据结构笔记-存图方式之链式前向星/bg.jpg">
-<meta property="og:updated_time" content="2021-04-19T14:29:10.993Z">
+<meta property="og:updated_time" content="2021-05-30T08:47:27.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构笔记 - 存图方式之链式前向星">
 <meta name="twitter:image" content="http://yoursite.com/2018/09/22/数据结构笔记-存图方式之链式前向星/bg.jpg">
@@ -395,7 +395,7 @@
 <p>这样一来，当我们需要遍历从一个点出发的所有边时，只需要从该点的第一条边开始，遍历完成后找到该边的“下一条边”继续遍历。</p>
 <p>具体实现时要用到两个数组，first数组和next数组。</p>
 <p>开始时我们将两个数组初始化为-1。</p>
-<p>我们用first[i]表示第i个点的第一条边，用next[i]表示第i条边的下一条边。这样，我们在遍历时，只需从first[i]开始遍历，依次遍历next[i]，next[next[i]]，······，直到next[i]=-1。</p>
+<p>我们用$first[i]$表示第$i$个点的第一条边，用$next[i]$表示第$i$条边的下一条边。这样，我们在遍历时，只需从$first[i]$开始遍历，依次遍历$next[i]，next[next[i]]，······，$直到$next[i]=-1$。</p>
 <p>（这个博主废话真多，还不给看代码）</p>
 <p>$Talk\ is\ cheap!Show\ me\ the\ code!$</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//n为点数，m为边数</span></span><br><span class="line"><span class="comment">//from[i]为第i条边的出发点，to[i]为第i条边的到达点，v[i]为边的权值</span></span><br><span class="line"><span class="comment">//读入边</span></span><br><span class="line"><span class="built_in">memset</span>(first,<span class="number">-1</span>,<span class="keyword">sizeof</span>(first));</span><br><span class="line"><span class="built_in">memset</span>(next,<span class="number">-1</span>,<span class="keyword">sizeof</span>(next));</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;from[i]&gt;&gt;to[i]&gt;&gt;v[i];</span><br><span class="line">    next[i]=first[from[i]];</span><br><span class="line">    first[from[i]]=i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//遍历从点i出发的各个边</span></span><br><span class="line"><span class="keyword">for</span>(j=first[i];j!=<span class="number">-1</span>;j=next[j])</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;from[j]&lt;&lt;to[j]&lt;&lt;v[j]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//遍历所有边</span></span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(j=first[i];j!=<span class="number">-1</span>;j=next[j])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;from[j]&lt;&lt;to[j]&lt;&lt;v[j]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -511,7 +511,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -522,7 +522,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -533,7 +533,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
